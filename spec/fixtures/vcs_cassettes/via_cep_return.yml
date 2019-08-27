@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://viacep.com.br/ws/21931380/json/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.16.0
+      Date:
+      - Mon, 26 Aug 2019 18:58:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS
+      Access-Control-Allow-Headers:
+      - Content-Type, X-Request-With, X-Requested-By
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Max-Age:
+      - '86400'
+      Expires:
+      - Mon, 26 Aug 2019 19:58:10 GMT
+      Cache-Control:
+      - max-age=3600
+      - public
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+          "cep": "21931-380",
+          "logradouro": "Rua Colina",
+          "complemento": "",
+          "bairro": "Jardim Guanabara",
+          "localidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "unidade": "",
+          "ibge": "3304557",
+          "gia": ""
+        }
+    http_version: 
+  recorded_at: Mon, 26 Aug 2019 18:58:10 GMT
+recorded_with: VCR 5.0.0
