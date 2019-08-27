@@ -25,4 +25,17 @@ RSpec.describe ViaCep, type: :service do
     end
   end
 
+  context 'when was given an incorrect zipcode' do
+    it 'returns an error if is not a number' do
+      expect { ViaCep.new('123a5678') }.to raise_error(WrongTypeOfArgumentError)
+    end
+
+    it 'returns an error if has less than 8 chars' do
+      expect { ViaCep.new('123') }.to raise_error(WrongSizeOfArgumentError)
+    end
+
+    it 'returns an error if has more than 8 numbers' do
+      expect { ViaCep.new('123456789') }.to raise_error(WrongSizeOfArgumentError)
+    end
+  end
 end
